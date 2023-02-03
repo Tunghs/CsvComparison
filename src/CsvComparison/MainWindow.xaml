@@ -6,7 +6,110 @@
         xmlns:local="clr-namespace:CsvComparison"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
-        
+        <TabControl>
+            <TabItem Header="hi">
+                <Grid>
+                    <ScrollViewer CanContentScroll="True"
+                                  x:Name="SV"                                  PreviewMouseWheel="ScrollViewer_PreviewMouseWheel"
+                                  VerticalScrollBarVisibility="Visible">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <DataGrid Grid.Column="0"
+                                      x:Name="StatusGrid"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      CanUserReorderColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Width="*" Binding="{Binding}">
+                                        <DataGridTextColumn.Header>
+                                            <TextBlock Text="FileName"/>
+                                        </DataGridTextColumn.Header>
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <DataGrid Grid.Column="2"
+                                      x:Name="testGrid"
+                                      AutoGenerateColumns="False"
+                                      CanUserReorderColumns="False"
+                                      CanUserSortColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Width="40" Binding="{Binding}">
+                                        <DataGridTextColumn.Header>
+                                            <TextBlock Text="Hi"/>
+                                        </DataGridTextColumn.Header>
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <DataGrid Grid.Column="4"
+                                      x:Name="test2Grid"
+                                      AutoGenerateColumns="False"
+                                      CanUserReorderColumns="False"
+                                      CanUserSortColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Width="40" Binding="{Binding}">
+                                        <DataGridTextColumn.Header>
+                                            <TextBlock Text="Hi"/>
+                                        </DataGridTextColumn.Header>
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <DataGrid Grid.Column="6"
+                                      x:Name="test3Grid"
+                                      AutoGenerateColumns="False"
+                                      CanUserReorderColumns="False"
+                                      CanUserSortColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Width="40" Binding="{Binding}">
+                                        <DataGridTextColumn.Header>
+                                            <TextBlock Text="Hi"/>
+                                        </DataGridTextColumn.Header>
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <DataGrid Grid.Column="8"
+                                      x:Name="test5Grid"
+                                      AutoGenerateColumns="False"
+                                      CanUserReorderColumns="False"
+                                      CanUserSortColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Width="40" Binding="{Binding}">
+                                        <DataGridTextColumn.Header>
+                                            <TextBlock Text="Hi"/>
+                                        </DataGridTextColumn.Header>
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="TTTTTTTTT">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+                <TabControl x:Name="TestTC">
+                    
+                </TabControl>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

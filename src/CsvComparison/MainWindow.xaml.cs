@@ -20,9 +20,68 @@ namespace CsvComparison
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<string> temp = new List<string>();
+
         public MainWindow()
         {
             InitializeComponent();
+
+
+            List<string> test = new List<string>();
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+            test.Add("A");
+
+            StatusGrid.ItemsSource = test;
+            testGrid.ItemsSource = test;
+        }
+
+        private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            ScrollViewer scv = (ScrollViewer)sender;
+            scv.ScrollToVerticalOffset(scv.VerticalOffset - e.Delta);
+            e.Handled = true;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
