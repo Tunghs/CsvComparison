@@ -104,11 +104,18 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                </Grid>
-                <TabControl x:Name="TestTC">
+
+                    <Button Width="30"
+                            Click="Button_Click"/>
                     
-                </TabControl>
+
+                    <TabControl x:Name="TestTC"
+                                Grid.Row="1">
+
+                    </TabControl>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
